@@ -1,14 +1,213 @@
+ /*배경색*/
 body{
-  background-color: black;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-.start_circle {
+  /*클릭이전의 자동차*/
+.g_class_b {
   position: absolute;
-  width: 500px;
-  height: 500px;
-  background-color: white;
-  top:50%;
+  top:70%;
   left: 50%;
   transform:translate(-50%, -50%);
-  border-radius: 50%;
+  width: 350px;
+  height: 160px;
+}
+
+  /*클릭이후의 자동차*/
+.g_class {
+  position: absolute;
+  top:70%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 360px;
+  height: 165px;
+  z-index: 1;
+}
+/*바퀴회전애니메이션*/
+@keyframes wheel_rotate{
+	100% {
+    	transform: rotate(-360deg);
+    }
+}
+/*바퀴*/
+.w1{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:72.5%;
+  left: 42.84%;
+  animation: wheel_rotate 0.3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 1;
+}
+.w2{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:72.6%;
+  left: 54.26%;
+  animation: wheel_rotate 0.3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 1;
+}
+
+
+ /*레일 애니메이션 셋팅*/
+@keyframes rail_start{
+  from{
+    left:-50%;
+  }
+  to{
+    left:50%;
+  }
+}
+
+/*레일*/
+ .rail{
+  position: absolute;
+  width: 2000px;
+  height: 400px;
+  background-color: black;
+  top:108.4%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  animation-name : rail_start;
+  animation-duration: 1s;
+ }
+
+  /*건물 애니메이션 셋팅*/
+  @keyframes c1_move{
+    from{
+      left:-200%;
+    }
+    to{
+      left:200%;
+    }
+  }
+  @keyframes c2_move{
+    from{
+      left:-2500%;
+    }
+    to{
+      left:140%;
+    }
+  }
+  /*나무 애니메이션 셋팅*/
+  @keyframes t1_move{
+    from{
+      left:-150%;
+    }
+    to{
+      left:250%;
+    }
+  }
+  @keyframes t2_move{
+    from{
+      left:-30%;
+    }
+    to{
+      left:370%;
+    }
+  }
+  @keyframes t3_move{
+    from{
+      left:-450%;
+    }
+    to{
+      left:160%;
+    }
+  }
+  @keyframes t4_move{
+    from{
+      left:-2500%;
+    }
+    to{
+      left:110%;
+    }
+  }
+  /*건물*/
+  .c1{
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    top:46%;
+    animation-name : c1_move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    transition-timing-function: linear;
+  }
+  .c2{
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    top:46%;
+    animation-name : c2_move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    transition-timing-function: linear;
+  }
+  /*나무*/
+  .t1{
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    top:55%;
+    animation-name : t1_move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    transition-timing-function: linear;
+  }
+  .t2{
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    top:55%;
+    animation-name : t2_move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    transition-timing-function: linear;
+  }
+  .t3{
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    top:55%;
+    animation-name : t3_move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    transition-timing-function: linear;
+  }
+  .t4{
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    top:55%;
+    animation-name : t4_move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+    transition-timing-function: linear;
+  }
+ /*글자에 대한 css*(위치 속성제외)*/
+ @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+.click_to_start{
+  text-align: center;
+  line-height: 700px;
+
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-family: 'Knewave', cursive;
+}
+
+/*마우스를 올릴시 효과*/
+.g_class_b:hover {
+  width: 360px;
+  height: 165px;
 }
