@@ -4,6 +4,80 @@ body{
   position: relative;
   overflow: hidden;
 }
+ /*포커스에 대한 css*(위치 속성제외)*/
+ @keyframes focus_on {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+ /*클릭 이후 포커스에 대한 css*(위치 속성제외)*/
+ @keyframes size_up {
+  from {
+    width: 470px;
+    height: 470px;
+  }
+  to {
+    width: 4000px;
+    height: 4000px;
+  }
+}
+
+/*클릭이전 검정 배경*/
+.black_box{
+  position: absolute;
+  width: 5000px;
+  height: 5000px;
+  top:70%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: black;
+  z-index: -1;
+}
+
+/*클릭이후 검정 배경*/
+.black_box_out{
+  position: absolute;
+  width: 5000px;
+  height: 5000px;
+  top:70%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: black;
+  z-index: -1;
+}
+
+/*포커스에 대한 css*(위치 속성제외)*/
+.white_circle{
+  position: absolute;
+  width: 470px;
+  height: 470px;
+  top:63%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  z-index: -1;
+  animation: focus_on 7s;
+}
+
+/*클릭이후 포커스*/
+.white_circle_out{
+  position: absolute;
+  width: 470px;
+  height: 470px;
+  top:63%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  z-index: -1;
+  animation: size_up 1s;
+  animation-fill-mode: forwards;
+}
 
   /*클릭이전의 자동차*/
 .g_class_b {
@@ -31,13 +105,29 @@ body{
     	transform: rotate(-360deg);
     }
 }
+
+.wheel_control{
+  position: absolute;
+  top:70%;
+  left: 50%;
+  width: 100px; 
+  height: 100px;
+  background-color: rgba(247, 0, 0, 0);
+  transform:translate(-50%, -50%);
+  z-index: 1;
+}
 /*바퀴*/
+/*
+  top:72.6%;
+  left: 42.83%;
+*/
 .w1{
   position: absolute;
   width: 50px;
   height: 50px;
-  top:72.5%;
-  left: 42.84%;
+  top:68%;
+  left: -87.5%;
+
   animation: wheel_rotate 0.3s linear infinite;
   transform-origin: 50% 50%;
   z-index: 1;
@@ -46,8 +136,9 @@ body{
   position: absolute;
   width: 50px;
   height: 50px;
-  top:72.6%;
-  left: 54.26%;
+  top:68.5%;
+  left: 132.4%;
+  
   animation: wheel_rotate 0.3s linear infinite;
   transform-origin: 50% 50%;
   z-index: 1;
@@ -204,6 +295,27 @@ body{
   color: rgb(0, 0, 0);
   font-size: 40px;
   font-family: 'Knewave', cursive;
+}
+
+ /*글자(스플래쉬시작)에 대한 css*(위치 속성제외)*/
+@keyframes fadeout {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+ /*글자(스플래쉬시작)에 대한 css*(위치 속성제외)*/
+.click_to_start_out{
+  text-align: center;
+  line-height: 700px;
+  animation: fadeout 0.5s;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-family: 'Knewave', cursive;
+  animation-fill-mode: forwards;
 }
 
 /*마우스를 올릴시 효과*/
