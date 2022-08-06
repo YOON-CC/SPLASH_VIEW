@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from "react";
+import TypingText  from './TypingText.js';
+import './TypingText.css';
 
 /*READY - 클릭을 하지 않았을 경우의 함수(HOVER)*/
 function READY(props){
@@ -47,10 +49,13 @@ function GO(){
     <img class="t4" alt="" src="img/나무.png"></img>
   </div>
 }
+
+
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 function App() {
   const [mode, setMode] = useState('stop');
   let content = null;
+  let content1 = null;
   let content2 = null;
 
   //시작화면에서 인트로를 위한 코드
@@ -69,14 +74,18 @@ function App() {
   }
   else if(mode === 'go'){
     content = <GO></GO>
+    content1 = <TypingText text={"Hello"} speed={150}></TypingText>
     content2 = <audio src = "audio/운전브금.mp3" autoPlay></audio>
   }
-  
+
+
   return (
     <div>
       {content}
+      {content1}
       {content2}
     </div>
+    
   );
 }
 
