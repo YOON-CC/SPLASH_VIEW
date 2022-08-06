@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import TypingText  from './TypingText.js';
 import './TypingText.css';
 
@@ -57,7 +56,10 @@ function App() {
   let content = null;
   let content1 = null;
   let content2 = null;
-
+  
+  //타이핑 문자배열 - 공백문자 출처https://animalface.site/zerospace.html
+  const textbox= ["​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​","Hello​​​​​​​​​​​​​​​​​​​​​​​​​​​​","This is Chan's homepage​​​​​​​​​​​​​​​​​​​​​​​​​​​​","​"]// 공백문자 사용(텀을 두기 위함)
+  
   //시작화면에서 인트로를 위한 코드
   if(mode === 'stop'){
     content = <READY onReady={()=>{
@@ -74,7 +76,7 @@ function App() {
   }
   else if(mode === 'go'){
     content = <GO></GO>
-    content1 = <TypingText text={"Hello"} speed={150}></TypingText>
+    content1 = <TypingText text={textbox} speed={200}></TypingText>
     content2 = <audio src = "audio/운전브금.mp3" autoPlay></audio>
   }
 
