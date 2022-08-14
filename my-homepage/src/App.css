@@ -168,6 +168,54 @@ body{
   animation-duration: 1s;
  }
 
+ @keyframes fadeInLeft {
+  0% {
+    left: 50%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+/*지바겐 부스트!*/
+ .g_class_boost {
+  position: absolute;
+  top:70%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 360px;
+  height: 165px;
+  z-index: 1;
+  animation: fadeInLeft 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+ /*레일부스트!*/
+ .rail_boost{
+  position: absolute;
+  width: 2000px;
+  height: 400px;
+  background-color: black;
+  top:108.4%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+ }
+/*휠 부스트!*/
+ .wheel_control_boost{
+  position: absolute;
+  top:70%;
+  left: 50%;
+  width: 100px; 
+  height: 100px;
+  background-color: rgba(247, 0, 0, 0);
+  transform:translate(-50%, -50%);
+  z-index: 1;
+  animation: fadeInLeft 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
   /*건물 애니메이션 셋팅*/
   @keyframes c1_move{
     from{

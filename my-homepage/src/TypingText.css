@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+.TypingText{
+    position: absolute;
+    font-size: 80px;
+    font-family: 'Knewave', cursive;
+    top:20%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    z-index: 1;
+  }
+
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+.b1{
+  position: relative;
+  background-color: rgb(0, 255, 170);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Knewave', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  padding: 7px;
+  border-radius: 11px;
+  box-shadow: 0 9px 0 rgb(6, 206, 162),0px 9px 25px rgba(0, 0, 0, .7);
+  left:-70%;
+  margin-top: 180%;
+  width: 200px;
+  text-align: center;
+}
+.b1:active {
+  box-shadow: 0 3px 0  rgb(6, 206, 162),0px 3px 6px rgba(0, 0, 0, .7);
+  position: relative;
+  top: 6px;
+}
+
+.b2{
+  position: relative;
+  background-color: rgb(253, 83, 83);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Knewave', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  padding: 7px;
+  border-radius: 11px;
+  box-shadow: 0 9px 0 rgb(192, 0, 0),0px 9px 25px rgba(0, 0, 0, .7);
+  left:70%;
+  margin-top: -21%;
+  
+  width: 200px;
+  text-align: center;
+}
+.b2:active {
+  box-shadow: 0 3px 0  rgb(192, 0, 0),0px 3px 6px rgba(0, 0, 0, .7);
+  position: relative;
+  top: 6px;
+}

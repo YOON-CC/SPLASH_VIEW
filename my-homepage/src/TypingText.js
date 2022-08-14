@@ -1,20 +1,35 @@
 import React, { useState, useEffect } from 'react';
 
-const TypingText = ({text, speed}) => { 
+const TypingText = ({text, speed, changebtn}) => { 
   const [Text, setText] = useState("");
   const [Count, setCount] = useState(0);
   const [index, setIndex] = useState(0);
-  let updated = Text;
   
+  let updated = Text;
+
+  function BUTTON(props){
+    return <div className="choice">
+      <a className = "b1" onClick={(event)=>{
+        changebtn(1);
+      }}
+      >Yes, let's get off</a>
+      
+      <a className = "b2" onClick={(event)=>{
+      }}>NO, just drive</a>
+    </div>
+  }
+
   useEffect(() => {
     let typingText = text ? text : "";//기본값
     let typingSpeed = speed ? speed : "";//기본값
     const interval = setInterval(() => { // setInterval은 함수를 반복 한다.
+      if(index <=1){ // 타이핑 금지! // 8 // 1
         setText((Text)=>{
           updated = Text + typingText[index][Count];
           return updated;
         });
-          setCount(Count + 1);
+      }
+      setCount(Count + 1);
     }, typingSpeed);
     
     // 다음 배열 실행하는 조건문
@@ -22,14 +37,21 @@ const TypingText = ({text, speed}) => {
       setCount(Count - (typingText[index].length+1)); // Count는 초기화
       setText(""); // 타이핑문자 초기화
       if (index !==(typingText.length-1)){ // 전체 일차배열의 수를 넣으면 된다.
-        setIndex(index + 1); // 그다음 일차배열 실행
+        setIndex(index + 1); // 그다음 일차배열 실행     
       }
     }
 
     return () => clearInterval(interval);
 })
   return (
-    <div class='TypingText'>{ Text }</div>
+    <div class='TypingText'>{ Text }
+      {
+        index >= 2 //9 // 2
+        ? <BUTTON></BUTTON>
+        : null
+      }
+
+    </div>
   )
 };
 

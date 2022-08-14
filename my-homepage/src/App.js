@@ -49,6 +49,19 @@ function GO(){
   </div>
 }
 
+/*부스터 온! - 홈페이지로 넘어간다.*/
+function BOOST(){
+  return <div className="start" >
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <img class="g_class_boost" alt="" src="img/G_CLASS.png"></img>
+    <div class='rail_boost'></div>
+    <div class='wheel_control_boost'>
+      <img class="w1" alt="" src="img/wheel1.png"></img>
+      <img class="w2" alt="" src="img/wheel2.png"></img>
+    </div>
+  </div>
+}
+
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 function App() {
@@ -57,8 +70,15 @@ function App() {
   let content1 = null;
   let content2 = null;
   
+  const [btn, setbtn] = useState(undefined);
+  const changebtn = (value) =>{
+    setbtn(value);
+  }
+
   //타이핑 문자배열 - 공백문자 출처https://animalface.site/zerospace.html
-  const textbox= ["​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​","Hello​​​​​​​​​​​​​​​​​​​​​​​​​​​​","This is Chan's homepage​​​​​​​​​​​​​​​​​​​​​​​​​​​​","​"]// 공백문자 사용(텀을 두기 위함)
+  const textbox= ["​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​","Hello​​​​​​​​​​​​​​​​​​​​​​​​​​​​","This is Chan's homepage​​​​​​​​​​​​​​​​​​​​​​​​​​​​", "How's it going?​​​​​​​​​​​​​​​​​​​​​​​​​​​​", "I'm the same everyday​​​​​​​​​​​​​​​​​​​​​​​​​​​​",
+                  "......​​​​​​​​​​​​​​​​​​​​​​​​​​​​", "We're almost there​​​​​​​​​​​​​​​​​​​​​​​​​​​​", "Then...​​​​​​​​​​​​​​​​​​​​​​​​​​​​",
+                   "Shall we visit for a while?​​​​​​​​​​​​​​​​​​​​​​​​​​​​","​"]// 공백문자 사용(텀을 두기 위함)
   
   //시작화면에서 인트로를 위한 코드
   if(mode === 'stop'){
@@ -76,16 +96,22 @@ function App() {
   }
   else if(mode === 'go'){
     content = <GO></GO>
-    content1 = <TypingText text={textbox} speed={200}></TypingText>
-    content2 = <audio src = "audio/운전브금.mp3" autoPlay></audio>
+    content1 = <TypingText text={textbox} speed={200} changebtn = {changebtn}></TypingText>
+    content2 = <audio src = "audio/운전브금.mp3" autoPlay></audio>   
   }
-
+  if(btn === 1){
+    content = <BOOST></BOOST>;
+    content1 = null;
+    content2 = null;
+  }
 
   return (
     <div>
-      {content}
-      {content1}
-      {content2}
+      <header>
+        {content}
+        {content1}
+        {content2}
+      </header>
     </div>
     
   );
