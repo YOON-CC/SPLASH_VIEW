@@ -15,6 +15,7 @@ const TypingText = ({text, speed, changebtn}) => {
       >Yes, let's get off</a>
       
       <a className = "b2" onClick={(event)=>{
+        changebtn(2);
       }}>NO, just drive</a>
     </div>
   }
@@ -23,7 +24,7 @@ const TypingText = ({text, speed, changebtn}) => {
     let typingText = text ? text : "";//기본값
     let typingSpeed = speed ? speed : "";//기본값
     const interval = setInterval(() => { // setInterval은 함수를 반복 한다.
-      if(index <=1){ // 타이핑 금지! // 8 // 1
+      if(index <=0){ // 타이핑 금지! // 8 // 0
         setText((Text)=>{
           updated = Text + typingText[index][Count];
           return updated;
@@ -46,7 +47,7 @@ const TypingText = ({text, speed, changebtn}) => {
   return (
     <div class='TypingText'>{ Text }
       {
-        index >= 2 //9 // 2
+        index >= 1 //9 // 1
         ? <BUTTON></BUTTON>
         : null
       }

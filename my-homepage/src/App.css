@@ -187,8 +187,10 @@ body{
   height: 165px;
   z-index: 1;
   animation: fadeInLeft 3s;
-  animation-iteration-count: infinite;
   animation-timing-function: linear;
+  animation-delay: 5s;
+  animation-fill-mode:forwards;
+
 }
 
  /*레일부스트!*/
@@ -212,10 +214,395 @@ body{
   transform:translate(-50%, -50%);
   z-index: 1;
   animation: fadeInLeft 3s;
-  animation-iteration-count: infinite;
   animation-timing-function: linear;
+  animation-delay: 5s;
+  animation-fill-mode:forwards;
+}
+.w1_boost{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:68%;
+  left: -87.5%;
+
+  animation: wheel_rotate 0.1s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 2;
+}
+.w2_boost{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:68.5%;
+  left: 132.4%;
+  
+  animation: wheel_rotate 0.1s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 2;
 }
 
+/*///////////////////////////////////////////////바람///////////////////////////////////////////////*/
+@keyframes wind1_move{
+  from{
+    left:-200%;
+  }
+  to{
+    left:200%;
+  }
+}
+.wind1{
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:10%;
+
+  animation-name : wind1_move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind2_move{
+  from{
+    left:-400%;
+  }
+  to{
+    left:200%;
+  }
+}
+.wind2{
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:20%;
+
+  animation-name : wind2_move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind3_move{
+  from{
+    left:-500%;
+  }
+  to{
+    left:200%;
+  }
+}
+.wind3{
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:30%;
+
+  animation-name : wind3_move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind4_move{
+  from{
+    left:-600%;
+  }
+  to{
+    left:200%;
+  }
+}
+.wind4{
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:40%;
+
+  animation-name : wind4_move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind5_move{
+  from{
+    left:-200%;
+  }
+  to{
+    left:200%;
+  }
+}
+.wind5{
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:50%;
+
+  animation-name : wind5_move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind6_move{
+  from{
+    left:-500%;
+  }
+  to{
+    left:500%;
+  }
+}
+.wind6{
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:60%;
+
+  animation-name : wind6_move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind7_move{
+  from{
+    left:-200%;
+  }
+  to{
+    left:400%;
+  }
+}
+.wind7{
+  position: absolute;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:70%;
+
+  animation-name : wind7_move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind8_move{
+  from{
+    left:-1000%;
+  }
+  to{
+    left:400%;
+  }
+}
+.wind8{
+  position: absolute;
+  width: 600px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:20%;
+
+  animation-name : wind8_move;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind9_move{
+  from{
+    left:-1000%;
+  }
+  to{
+    left:400%;
+  }
+}
+.wind9{
+  position: absolute;
+  width: 600px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:30%;
+
+  animation-name : wind9_move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind10_move{
+  from{
+    left:-300%;
+  }
+  to{
+    left:400%;
+  }
+}
+.wind10{
+  position: absolute;
+  width: 600px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:40%;
+
+  animation-name : wind10_move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes wind11_move{
+  from{
+    left:-400%;
+  }
+  to{
+    left:200%;
+  }
+}
+.wind11{
+  position: absolute;
+  width: 600px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  top:55%;
+
+  animation-name : wind11_move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+/*큰 바람*/
+@keyframes curtain1{
+  from{
+    left:-1300%;
+  }
+  to{
+    left:50%;
+  }
+}
+.curtain1{
+  position: absolute;
+  width: 2000px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  top:7%;
+  left:-100%;
+
+  transform:translate(-50%, -50%);
+  animation-name : curtain1;
+  animation-duration: 1.5s;
+  transition-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-delay: 5.5s;
+}
+
+@keyframes curtain2{
+  from{
+    left:-800%;
+  }
+  to{
+    left:50%;
+  }
+}
+.curtain2{
+  position: absolute;
+  width: 2000px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  top:21%;
+  left:-100%;
+
+  transform:translate(-50%, -50%);
+  animation-name : curtain2;
+  animation-duration: 1.5s;
+  transition-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-delay: 5.5s;
+}
+@keyframes curtain3{
+  from{
+    left:-1000%;
+  }
+  to{
+    left:50%;
+  }
+}
+.curtain3{
+  position: absolute;
+  width: 2000px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  top:35%;
+  left:-100%;
+
+  transform:translate(-50%, -50%);
+  animation-name : curtain3;
+  animation-duration: 1.5s;
+  transition-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-delay: 5.5s;
+}
+@keyframes curtain4{
+  from{
+    left:-750%;
+  }
+  to{
+    left:50%;
+  }
+}
+.curtain4{
+  position: absolute;
+  width: 2000px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  top:49%;
+  left:-100%;
+
+  transform:translate(-50%, -50%);
+  animation-name : curtain4;
+  animation-duration: 1.5s;
+  transition-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-delay: 5.5s;
+}
+@keyframes curtain5{
+  from{
+    left:-1350%;
+  }
+  to{
+    left:50%;
+  }
+}
+.curtain5{
+  position: absolute;
+  width: 2000px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  top:60%;
+  left:-100%;
+
+  transform:translate(-50%, -50%);
+  animation-name : curtain5;
+  animation-duration: 1.5s;
+  transition-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-delay: 5.5s;
+}
+@keyframes curtain6{
+  from{
+    left:-850%;
+  }
+  to{
+    left:50%;
+  }
+}
+.curtain6{
+  position: absolute;
+  width: 2000px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  top:74%;
+  left:-100%;
+
+  transform:translate(-50%, -50%);
+  animation-name : curtain6;
+  animation-duration: 1.5s;
+  transition-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-delay: 5.5s;
+}
+/*////////////////////////////////////////////바람 끝///////////////////////////////////////////////*/
   /*건물 애니메이션 셋팅*/
   @keyframes c1_move{
     from{
@@ -370,4 +757,167 @@ body{
 .g_class_b:hover {
   width: 360px;
   height: 165px;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@드라이브 화면@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*지바겐 드라이브!*/
+.g_class_drive {
+  position: absolute;
+  top:70%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 360px;
+  height: 165px;
+  z-index: 1;
+  animation: fadeInLeft 5s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode:forwards;
+
+}
+
+ /*레일드라이브!*/
+ .rail_drive1{
+  position: absolute;
+  width: 2000px;
+  height: 400px;
+  background-color: black;
+  top:108.4%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+ }
+/*휠 드라이브!*/
+ .wheel_control_drive{
+  position: absolute;
+  top:70%;
+  left: 50%;
+  width: 100px; 
+  height: 100px;
+  background-color: rgba(247, 0, 0, 0);
+  transform:translate(-50%, -50%);
+  z-index: 1;
+  animation: fadeInLeft 5s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode:forwards;
+}
+.w1_drive{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:68%;
+  left: -87.5%;
+
+  animation: wheel_rotate 0.3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 2;
+}
+.w2_drive{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:68.5%;
+  left: 132.4%;
+  
+  animation: wheel_rotate 0.3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 2;
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@씬2@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+ /*레일드라이브!*/
+ .rail_drive2{
+  position: absolute;
+  width: 3000px;
+  height: 2000px;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+ }
+
+ /*지바겐 드라이브!*/
+ @keyframes fadeInLeftup {
+  0% {
+    left: 50%;
+    top:70% ;
+  }
+  to {
+    left: -100%;
+  }
+}
+.g_class_drive2 {
+  position: absolute;
+  top:70%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+
+  width: 360px;
+  height: 165px;
+  z-index: 2;
+  animation: fadeInLeft 5s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode:forwards;
+  animation-iteration-count: infinite;
+
+}
+
+.rail_road_back{
+  position: absolute;
+  width: 3000px;
+  height: 480px;
+  top:100%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+}
+
+ /*@@@@@@@@@@@@@@@@@@@@@@@@@전환@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+ /*장면*/
+@keyframes scene_move {
+  0% {
+      width:3000px;
+      height: 3000px;
+  }
+  35% {
+    width:0px;
+    height: 0px;    
+  }
+  65% {
+    width:0px;
+    height: 0px;    
+  }
+  100%{
+    width:3000px;
+    height: 3000px;  
+  }
+}
+
+.scene{
+  position: absolute;
+  width: 3000px;
+  height: 3000px;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+
+  animation: scene_move 6s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+
+.scene_back_ground{
+  position: absolute;
+  width: 5000px;
+  height: 5000px;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+  z-index: -1;
 }

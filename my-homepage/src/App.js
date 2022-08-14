@@ -56,13 +56,56 @@ function BOOST(){
     <img class="g_class_boost" alt="" src="img/G_CLASS.png"></img>
     <div class='rail_boost'></div>
     <div class='wheel_control_boost'>
-      <img class="w1" alt="" src="img/wheel1.png"></img>
-      <img class="w2" alt="" src="img/wheel2.png"></img>
+      <img class="w1_boost" alt="" src="img/wheel1.png"></img>
+      <img class="w2_boost" alt="" src="img/wheel2.png"></img>
     </div>
+    <div class ="wind1"></div>
+    <div class ="wind2"></div>
+    <div class ="wind3"></div>
+    <div class ="wind4"></div>
+    <div class ="wind5"></div>
+    <div class ="wind6"></div>
+    <div class ="wind7"></div>
+    <div class ="wind8"></div>
+    <div class ="wind9"></div>
+    <div class ="wind10"></div>
+    <div class ="wind11"></div>
+
+    <div class = "curtain1"></div>
+    <div class = "curtain2"></div>
+    <div class = "curtain3"></div>
+    <div class = "curtain4"></div>
+    <div class = "curtain5"></div>
+    <div class = "curtain6"></div>
   </div>
 }
 
+//드라이브1
+function DRIVE1(){
+  return <div className="start">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <img class="g_class_drive" alt="" src="img/G_CLASS.png"></img>
+    <div class='rail_drive1'></div>
+    <div class='wheel_control_drive'>
+      <img class="w1_drive" alt="" src="img/wheel1.png"></img>
+      <img class="w2_drive" alt="" src="img/wheel2.png"></img>
+    </div>
+    <div class = "scene_back_ground">
+      <div class = "scene"></div>
+    </div>
 
+</div>
+}
+
+//드라이브2
+function DRIVE2(){
+  return <div className="start">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <img class="g_class_drive2" alt="" src="img/G_CLASS.png"></img>
+    <img class="rail_road_back" alt="" src="img/road.png"></img>
+    <div class="rail_drive2"></div>
+</div>
+}
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 function App() {
   const [mode, setMode] = useState('stop');
@@ -70,10 +113,17 @@ function App() {
   let content1 = null;
   let content2 = null;
   
+  //타이핑 문자에서 버튼 state
   const [btn, setbtn] = useState(undefined);
   const changebtn = (value) =>{
     setbtn(value);
   }
+
+  //드라이브 state
+  const[drive, setDrive] = useState(0);
+
+  //홈페이지 이동
+  const [go, setGo] = useState(0);
 
   //타이핑 문자배열 - 공백문자 출처https://animalface.site/zerospace.html
   const textbox= ["​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​","Hello​​​​​​​​​​​​​​​​​​​​​​​​​​​​","This is Chan's homepage​​​​​​​​​​​​​​​​​​​​​​​​​​​​", "How's it going?​​​​​​​​​​​​​​​​​​​​​​​​​​​​", "I'm the same everyday​​​​​​​​​​​​​​​​​​​​​​​​​​​​",
@@ -99,8 +149,32 @@ function App() {
     content1 = <TypingText text={textbox} speed={200} changebtn = {changebtn}></TypingText>
     content2 = <audio src = "audio/운전브금.mp3" autoPlay></audio>   
   }
-  if(btn === 1){
+  
+  //부스트 온!
+  if(btn === 1){ 
     content = <BOOST></BOOST>;
+    content1 = <audio src = "audio/지바겐_과속.mp3" autoPlay></audio>
+    setTimeout(()=>{ setGo(1) }, 8000);
+  }  
+  
+  //드라이브시작~
+  if(btn === 2 && drive == 0){ 
+    content = null;
+    content1 = <DRIVE1></DRIVE1>
+    setTimeout(()=>{ setDrive(1) }, 8000);
+  }
+
+  //씬전환1
+  if(drive === 1){
+    content = null;
+    content1 = <DRIVE2></DRIVE2>
+    //setTimeout(()=>{ setDrive(2) }, 10000);
+  }
+
+
+  // 홈페이지 이동!
+  if(go === 1){
+    content = null;
     content1 = null;
     content2 = null;
   }
