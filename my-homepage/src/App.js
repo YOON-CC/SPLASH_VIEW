@@ -90,29 +90,30 @@ function DRIVE1(){
       <img class="w1_drive" alt="" src="img/wheel1.png"></img>
       <img class="w2_drive" alt="" src="img/wheel2.png"></img>
     </div>
-    <div class = "scene_back_ground">
-      <div class = "scene"></div>
-    </div>
-
 </div>
 }
 
-//드라이브2
+//드라이브2 => 사이드
 function DRIVE2(){
   return <div className="start">
     <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
-    <img class="g_class_drive2" alt="" src="img/G_CLASS.png"></img>
-    <img class="rail_road_back" alt="" src="img/road.png"></img>
-    <div class="rail_drive2"></div>
+    <img class="g_class_drive2" alt="" src="img/G_CLASS_FRONT.png"></img>
+    <div class ="rail_drive2"></div>
+    <div class ="rail_drive22"></div>
+    <div class='wheel_control_drive2'>
+      <img class="w1_drive2" alt="" src="img/wheel1.png"></img>
+      <img class="w2_drive2" alt="" src="img/wheel2.png"></img>
+    </div>
 </div>
 }
+
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 function App() {
   const [mode, setMode] = useState('stop');
   let content = null;
   let content1 = null;
   let content2 = null;
-  
+
   //타이핑 문자에서 버튼 state
   const [btn, setbtn] = useState(undefined);
   const changebtn = (value) =>{
@@ -161,14 +162,13 @@ function App() {
   if(btn === 2 && drive == 0){ 
     content = null;
     content1 = <DRIVE1></DRIVE1>
-    setTimeout(()=>{ setDrive(1) }, 8000);
+    setTimeout(()=>{ setDrive(1) }, 7000);
   }
 
   //씬전환1
   if(drive === 1){
     content = null;
     content1 = <DRIVE2></DRIVE2>
-    //setTimeout(()=>{ setDrive(2) }, 10000);
   }
 
 

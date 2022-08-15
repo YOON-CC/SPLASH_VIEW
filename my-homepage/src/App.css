@@ -777,6 +777,15 @@ body{
 
 }
 
+@keyframes rail_drive1_fadeout {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
  /*레일드라이브!*/
  .rail_drive1{
   position: absolute;
@@ -786,6 +795,9 @@ body{
   top:108.4%;
   left: 50%;
   transform:translate(-50%, -50%);
+  animation: rail_drive1_fadeout 1s;
+  animation-delay: 4s;
+  animation-fill-mode:forwards;
  }
 /*휠 드라이브!*/
  .wheel_control_drive{
@@ -825,56 +837,6 @@ body{
   z-index: 2;
 }
 
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@씬2@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
- /*레일드라이브!*/
- .rail_drive2{
-  position: absolute;
-  width: 3000px;
-  height: 2000px;
-  background-color: rgb(255, 255, 255);
-  top: 50%;
-  left: 50%;
-  transform:translate(-50%, -50%);
- }
-
- /*지바겐 드라이브!*/
- @keyframes fadeInLeftup {
-  0% {
-    left: 50%;
-    top:70% ;
-  }
-  to {
-    left: -100%;
-  }
-}
-.g_class_drive2 {
-  position: absolute;
-  top:70%;
-  left: 50%;
-  transform:translate(-50%, -50%);
-
-  width: 360px;
-  height: 165px;
-  z-index: 2;
-  animation: fadeInLeft 5s;
-  animation-timing-function: linear;
-  animation-delay: 1s;
-  animation-fill-mode:forwards;
-  animation-iteration-count: infinite;
-
-}
-
-.rail_road_back{
-  position: absolute;
-  width: 3000px;
-  height: 480px;
-  top:100%;
-  left: 50%;
-  transform:translate(-50%, -50%);
-  z-index: 1;
-}
-
  /*@@@@@@@@@@@@@@@@@@@@@@@@@전환@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
  /*장면*/
 @keyframes scene_move {
@@ -895,29 +857,96 @@ body{
     height: 3000px;  
   }
 }
-
-.scene{
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@드라이브2@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@keyframes fadeInLeft2 {
+  0% {
+    left: 80%;
+    top:80%;
+  }
+  to {
+    left: -100%;
+    top:105%;
+  }
+}
+.g_class_drive2 {
   position: absolute;
-  width: 3000px;
-  height: 3000px;
-  top: 50%;
-  left: 50%;
+  top:80%;
+  left: 80%;
   transform:translate(-50%, -50%);
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-
-  animation: scene_move 6s;
-  animation-timing-function: linear;
-  animation-delay: 2s;
+  width: 380px;
+  height: 170px;
+  z-index: 1;
+  animation: fadeInLeft2 5s;
+  animation-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-iteration-count: infinite;
+}
+.rail_drive2{
+  position: absolute;
+  border-bottom: 400px solid black;
+  border-left: 12000px solid transparent;
+  border-right: 0px solid transparent;
+  width: 2000px;
+  top:90%;
+  left: 80%;
+  transform:translate(-50%, -50%);
+ }
+ .rail_drive22{
+  position: absolute;
+  border-bottom: 400px solid rgb(255, 255, 255);
+  border-left: 7000px solid transparent;
+  border-right: 0px solid transparent;
+  width: 2000px;
+  top:102%;
+  left: 80%;
+  transform:translate(-50%, -50%);
+ }
+ @keyframes wheel_rotate{
+	100% {
+    	transform: rotate(-360deg);
+    }
 }
 
-.scene_back_ground{
+.wheel_control_drive2{
   position: absolute;
-  width: 5000px;
-  height: 5000px;
-  top: 50%;
-  left: 50%;
+  top:80%;
+  left: 80%;
+  width: 100px; 
+  height: 100px;
+  background-color: rgba(247, 0, 0, 0);
   transform:translate(-50%, -50%);
-  background-color: rgb(0, 0, 0);
-  z-index: -1;
+  z-index: 1;
+
+  animation: fadeInLeft2 5s;
+  animation-timing-function: linear;
+  animation-fill-mode:forwards;
+  animation-iteration-count: infinite;
+}
+/*바퀴*/
+/*
+  top:72.6%;
+  left: 42.83%;
+*/
+.w1_drive2{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top:73%;
+  left: -27%;
+
+  animation: wheel_rotate 0.3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 1;
+}
+.w2_drive2{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top:74.7%;
+  left: 176%;
+  
+  animation: wheel_rotate 0.3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: 1;
 }
