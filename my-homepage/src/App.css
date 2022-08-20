@@ -859,14 +859,81 @@ body{
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*@@@@@@@@@@@@@@@@@@@@@@@@드라이브2@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@로드 시작@@@@@@@@@@@@@@@@@@@@@@@@*/
+@keyframes fadein_drive2 {
+  from {
+      opacity: 0;
+      visibility: hidden;
+  }
+  to {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+.rail_drive2{
+  position: absolute;
+  border-bottom: 400px solid black;
+  border-left: 12000px solid transparent;
+  border-right: 0px solid transparent;
+  width: 2000px;
+  top:90%;
+  left: 80%;
+  transform:translate(-50%, -50%);
+  animation: fadein_drive2 1s;
+
+  visibility: hidden;
+  animation-fill-mode:forwards;
+ }
+ .rail_drive22{
+  position: absolute;
+  border-bottom: 400px solid rgb(255, 255, 255);
+  border-left: 7000px solid transparent;
+  border-right: 0px solid transparent;
+  width: 2000px;
+  top:102%;
+  left: 80%;
+  transform:translate(-50%, -50%);
+ }
+ .t_drive1{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top:50%;
+  left: 70%;
+  z-index: -1;
+  animation: fadein_drive2 2s;
+
+  visibility: hidden;
+  animation-fill-mode:forwards;
+}
+.t_drive2{
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  top:45%;
+  left: 5%;
+  z-index: -1;
+  animation: fadein_drive2 2s;
+
+  visibility: hidden;
+  animation-fill-mode:forwards;
+}
+/*@@@@@@@@@@@@@@@@@@@@@로드 끝@@@@@@@@@@@@@@@@@@@@@@@@*/
 @keyframes fadeInLeft2 {
   0% {
     left: 80%;
     top:80%;
+    visibility: hidden;
   }
   to {
     left: -100%;
     top:105%;
+    visibility: visible;
+  }
+}
+@keyframes wheel_rotate{
+	100% {
+     transform: rotate(-360deg);
   }
 }
 .g_class_drive2 {
@@ -880,34 +947,10 @@ body{
   animation: fadeInLeft2 5s;
   animation-timing-function: linear;
   animation-fill-mode:forwards;
-  animation-iteration-count: infinite;
-}
-.rail_drive2{
-  position: absolute;
-  border-bottom: 400px solid black;
-  border-left: 12000px solid transparent;
-  border-right: 0px solid transparent;
-  width: 2000px;
-  top:90%;
-  left: 80%;
-  transform:translate(-50%, -50%);
- }
- .rail_drive22{
-  position: absolute;
-  border-bottom: 400px solid rgb(255, 255, 255);
-  border-left: 7000px solid transparent;
-  border-right: 0px solid transparent;
-  width: 2000px;
-  top:102%;
-  left: 80%;
-  transform:translate(-50%, -50%);
- }
- @keyframes wheel_rotate{
-	100% {
-    	transform: rotate(-360deg);
-    }
-}
+  visibility: hidden;
+  animation-delay: 4s;
 
+}
 .wheel_control_drive2{
   position: absolute;
   top:80%;
@@ -918,16 +961,13 @@ body{
   transform:translate(-50%, -50%);
   z-index: 1;
 
-  animation: fadeInLeft2 5s;
+  animation: fadeInLeft2 5s forwards;
   animation-timing-function: linear;
   animation-fill-mode:forwards;
-  animation-iteration-count: infinite;
+  visibility: hidden;
+  animation-delay: 4s;
 }
-/*바퀴*/
-/*
-  top:72.6%;
-  left: 42.83%;
-*/
+
 .w1_drive2{
   position: absolute;
   width: 55px;
@@ -950,3 +990,50 @@ body{
   transform-origin: 50% 50%;
   z-index: 1;
 }
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+.typing_drive2{
+  position: absolute;
+  top:20%;
+  left: 23%;
+  width: 2000px;
+  font-size: 80px;
+  font-family: 'Russo One', sans-serif;
+  animation: typing 5s steps(70);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes for_scene_3 {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.go_to_scene_3{
+  position: absolute;
+  width: 10000px;
+  height: 3000px;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+  top: 70%;
+  left: 50%;
+
+  visibility: hidden;
+  animation: for_scene_3 3s;
+  transform:translate(-50%, -50%);
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@드라이브3@@@@@@@@@@@@@@@@@@@@@@@@@*/

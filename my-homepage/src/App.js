@@ -104,9 +104,18 @@ function DRIVE2(){
       <img class="w1_drive2" alt="" src="img/wheel1.png"></img>
       <img class="w2_drive2" alt="" src="img/wheel2.png"></img>
     </div>
+    <img class="t_drive1" alt="" src="img/나무.png"></img>
+    <img class="t_drive2" alt="" src="img/나무.png"></img>
+    <div class="typing_drive2">Designed by CSS and PPT</div>
+    <div class="go_to_scene_3"></div>
 </div>
 }
 
+//드라이브2 => 사이드
+function DRIVE3(){
+  return <div className="start">
+</div>
+}
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 function App() {
   const [mode, setMode] = useState('stop');
@@ -148,7 +157,12 @@ function App() {
   else if(mode === 'go'){
     content = <GO></GO>
     content1 = <TypingText text={textbox} speed={200} changebtn = {changebtn}></TypingText>
-    content2 = <audio src = "audio/운전브금.mp3" autoPlay></audio>   
+    if (btn !==2){
+      content2 = <audio src = "audio/운전브금.mp3" autoPlay></audio>  
+    } 
+    else if(btn ===2){
+      content2 = <audio src = "audio/드라이브브금.mp3" autoPlay></audio> ;
+    }
   }
   
   //부스트 온!
@@ -158,20 +172,27 @@ function App() {
     setTimeout(()=>{ setGo(1) }, 8000);
   }  
   
-  //드라이브시작~
-  if(btn === 2 && drive == 0){ 
+  //씬0(드라이브1시작~)
+  if(btn === 2 && drive === 0){ 
     content = null;
     content1 = <DRIVE1></DRIVE1>
     setTimeout(()=>{ setDrive(1) }, 7000);
   }
 
-  //씬전환1
+  //씬1(드라이브2)
   if(drive === 1){
     content = null;
     content1 = <DRIVE2></DRIVE2>
+    setTimeout(()=>{ setDrive(2) }, 10000);
   }
 
+  //씬2(드라이브3)
+  if(drive === 2){
+    content = null;
+    content1 = <DRIVE3></DRIVE3>
+  }
 
+////////////////홈페이지 이동//////////////////
   // 홈페이지 이동!
   if(go === 1){
     content = null;
