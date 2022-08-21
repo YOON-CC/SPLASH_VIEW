@@ -93,7 +93,7 @@ function DRIVE1(){
 </div>
 }
 
-//드라이브2 => 사이드
+//드라이브2 => 사이드//
 function DRIVE2(){
   return <div className="start">
     <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
@@ -106,14 +106,44 @@ function DRIVE2(){
     </div>
     <img class="t_drive1" alt="" src="img/나무.png"></img>
     <img class="t_drive2" alt="" src="img/나무.png"></img>
-    <div class="typing_drive2">Designed by CSS and PPT</div>
+    <div class="typing_drive2">Portfolio made by myself</div>
     <div class="go_to_scene_3"></div>
 </div>
 }
 
-//드라이브2 => 사이드
+//드라이브3 => 사이드
 function DRIVE3(){
   return <div className="start">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <img class="g_class_drive3" alt="" src="img/G_CLASS_B_SIDE.png"></img>
+    <div class ="rail_drive3"></div>
+    <div class ="rail_drive33"></div>
+    <div class='wheel_control_drive3'>
+      <img class="w1_drive3" alt="" src="img/wheel1.png"></img>
+      <img class="w2_drive3" alt="" src="img/wheel2.png"></img>
+    </div>
+    <img class="c_drive3" alt="" src="img/건물.png"></img>
+    <img class="t_drive3" alt="" src="img/나무.png"></img>
+    <div class="typing_drive2">Designed by CSS and PPT</div>
+    <div class="go_to_scene_4"></div>
+</div>
+}
+
+//드라이브4 => 정면
+function DRIVE4(){
+  return <div className="start5">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <div class="drive4_car1_background"></div>
+    <img class="g_class_drive4" alt="" src="img/G_CLASS_F.png"></img>
+    <div class ="rail_drive4"></div>
+    <div class ="rail_drive4_2"></div>
+    <img class="t1_drive4" alt="" src="img/나무.png"></img>
+    <img class="t2_drive4" alt="" src="img/나무.png"></img>
+    <img class="t3_drive4" alt="" src="img/나무.png"></img>
+    <div class="typing_drive4">Coding in</div>
+    <img class="logo1" alt="" src="img/LOGO1.png"></img>
+    <img class="logo2" alt="" src="img/LOGO2.png"></img>
+    <img class="logo3" alt="" src="img/LOGO3.png"></img>
 </div>
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -190,6 +220,13 @@ function App() {
   if(drive === 2){
     content = null;
     content1 = <DRIVE3></DRIVE3>
+    setTimeout(()=>{ setDrive(3) }, 7000);
+  }
+
+  //씬3(드라이브4)
+  if(drive === 3){
+    content = null;
+    content1 = <DRIVE4></DRIVE4>
   }
 
 ////////////////홈페이지 이동//////////////////
