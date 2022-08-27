@@ -144,6 +144,31 @@ function DRIVE4(){
     <img class="logo1" alt="" src="img/LOGO1.png"></img>
     <img class="logo2" alt="" src="img/LOGO2.png"></img>
     <img class="logo3" alt="" src="img/LOGO3.png"></img>
+    <div class="go_to_scene_4"></div>
+</div>
+}
+
+//드라이브5 => 정면
+function DRIVE5(){
+  return <div className="start5">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <div class ="rail_drive5"></div>
+    <div class ="rail_drive5_2"></div>
+    <div class ="rail_drive5_3"></div>
+    <img class="g_class_drive5_1" alt="" src="img/G_CLASS.png"></img>
+    <img class="g_class_drive5_2" alt="" src="img/G_CLASS_L.png"></img>
+    <div class="typing_drive5_1">PRODUTION</div>
+    <div class="typing_drive5_2">DATE</div>
+    <div class="typing_drive5_3">FROM</div>
+    <div class="typing_drive5_4">2022</div>
+    <div class='wheel_control_drive5_1'>
+      <img class="w1_drive5_1" alt="" src="img/wheel1.png"></img>
+      <img class="w2_drive5_11" alt="" src="img/wheel2.png"></img>
+    </div>
+    <div class='wheel_control_drive5_2'>
+      <img class="w1_drive5_2" alt="" src="img/wheel1.png"></img>
+      <img class="w2_drive5_22" alt="" src="img/wheel2.png"></img>
+    </div>
 </div>
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -227,7 +252,15 @@ function App() {
   if(drive === 3){
     content = null;
     content1 = <DRIVE4></DRIVE4>
+    setTimeout(()=>{ setDrive(4) }, 7000);
   }
+
+  //씬4(드라이브5)
+  if(drive === 4){
+    content = null;
+    content1 = <DRIVE5></DRIVE5>
+  }
+
 
 ////////////////홈페이지 이동//////////////////
   // 홈페이지 이동!
