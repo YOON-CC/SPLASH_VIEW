@@ -169,6 +169,51 @@ function DRIVE5(){
       <img class="w1_drive5_2" alt="" src="img/wheel1.png"></img>
       <img class="w2_drive5_22" alt="" src="img/wheel2.png"></img>
     </div>
+    <div class="go_to_scene_5"></div>
+</div>
+}
+
+//드라이브6 => 정면
+function DRIVE6(){
+  return <div className="start5">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <img class="g_class_drive6" alt="" src="img/G_CLASS.png"></img>
+    <div class='wheel_control_drive6'>
+      <img class="w1_drive6" alt="" src="img/wheel1.png"></img>
+      <img class="w2_drive6" alt="" src="img/wheel2.png"></img>
+    </div>
+    <div class ="rail_drive6"></div>
+    <div class ="rail_drive6_1"></div>
+    <div class ="rail_drive6_2"></div>
+    <div class ="sea"></div>
+    <div class ="wave1"></div>
+    <div class ="wave2"></div>
+    <div class ="wave3"></div>
+    <div class ="wave4"></div>
+    <div class ="wave5"></div>
+    <div class ="wave6"></div>
+    <div class ="wave7"></div>
+    <img class="bridge" alt="" src="img/bridge.png"></img>
+    <div class="typing_drive_6">COPYRIGHT</div>
+    <div class="typing_drive_6_1">https://www.mercedes-benz.co.kr</div>
+    <div class="go_to_scene_6"></div>
+</div>
+}
+
+//드라이브7 => 정면
+function DRIVE7(){
+  return <div className="start5">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <div class ="rail_drive7"></div>
+    <img class="g_class_drive7" alt="" src="img/G_CLASS.png"></img>
+</div>
+}
+
+//드라이브8 => 정면
+function DRIVE8(){
+  return <div className="start5">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <div class ="rail_drive8"></div>
 </div>
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -234,7 +279,7 @@ function App() {
     setTimeout(()=>{ setDrive(1) }, 7000);
   }
 
-  //씬1(드라이브2)
+  // //씬1(드라이브2)
   if(drive === 1){
     content = null;
     content1 = <DRIVE2></DRIVE2>
@@ -256,12 +301,31 @@ function App() {
   }
 
   //씬4(드라이브5)
-  if(drive === 4){
+  if(drive ===4){ // 4를 적어야함
     content = null;
     content1 = <DRIVE5></DRIVE5>
+    setTimeout(()=>{ setDrive(5) }, 7000);
   }
 
+   //씬5(드라이브6)
+   if(drive === 5){
+    content = null;
+    content1 = <DRIVE6></DRIVE6>
+    setTimeout(()=>{ setDrive(6) }, 7000);
+  }
 
+   //씬6(드라이브7)
+   if(drive === 6){
+    content = null;
+    content1 = <DRIVE7></DRIVE7>
+    setTimeout(()=>{ setDrive(7) }, 2500);
+  }
+
+   //씬7(드라이브8)
+   if(drive === 7){
+    content = null;
+    content1 = <DRIVE8></DRIVE8>
+  }
 ////////////////홈페이지 이동//////////////////
   // 홈페이지 이동!
   if(go === 1){

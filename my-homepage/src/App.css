@@ -1584,4 +1584,323 @@ body{
   animation: typing_drive5_4 1s infinite;
   animation-delay: 3;
 }
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@드라이브6@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.go_to_scene_5{
+  position: absolute;
+  width: 10000px;
+  height: 3000px;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+  top: 70%;
+  left: 50%;
 
+  visibility: hidden;
+  animation: for_scene_3 1s;
+  transform:translate(-50%, -50%);
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  z-index: 3;
+}
+
+.rail_drive6{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 45px;
+  height: 700px;
+  top: 70%;
+  left: 31.65%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+}
+
+.rail_drive6_1{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 45px;
+  height: 700px;
+  top: 70%;
+  left: 68.25%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+}
+
+.rail_drive6_2{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 2000px;
+  height: 63px;
+  top: 87.8%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+}
+
+.sea{
+  position: absolute;
+  background-color: rgb(0, 255, 221);
+  width: 2000px;
+  height: 300px;
+  top: 130%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+}
+
+@keyframes wave_move{
+  0%{
+    top: 122%;
+  }
+  50%{
+    top: 121%;
+  }
+  100%{
+    top: 122%;
+  }
+} 
+.wave1{
+  position: absolute;
+  background-color: rgb(88, 162, 190);
+  width: 800px;
+  height: 200px;
+  border-radius: 50%;
+  top: 122%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+
+  animation: wave_move 2.5s infinite;
+}
+.wave2{
+  position: absolute;
+  background-color: rgb(88, 162, 190);
+  width: 800px;
+  height: 200px;
+  border-radius: 50%;
+  top: 122%;
+  left: 33%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+
+  animation: wave_move 3s infinite;
+}
+.wave3{
+  position: absolute;
+  background-color: rgb(88, 162, 190);
+  width: 800px;
+  height: 200px;
+  border-radius: 50%;
+  top: 122%;
+  left: 67%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+
+  animation: wave_move 3s infinite;
+  animation-delay: 1s;
+}
+.wave4{
+  position: absolute;
+  background-color: rgb(88, 162, 190);
+  width: 800px;
+  height: 200px;
+  border-radius: 50%;
+  top: 122%;
+  left: 17%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+
+  animation: wave_move 3s infinite;
+  animation-delay: 1s;
+}
+.wave5{
+  position: absolute;
+  background-color: rgb(88, 162, 190);
+  width: 800px;
+  height: 200px;
+  border-radius: 50%;
+  top: 122%;
+  left: 83%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+
+  animation: wave_move 3s infinite;
+  animation-delay: 2s;
+}
+.wave6{
+  position: absolute;
+  background-color: rgb(88, 162, 190);
+  width: 800px;
+  height: 200px;
+  border-radius: 50%;
+  top: 122%;
+  left: 5%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+
+  animation: wave_move 3s infinite;
+  animation-delay: 2s;
+}
+.wave7{
+  position: absolute;
+  background-color: rgb(88, 162, 190);
+  width: 800px;
+  height: 200px;
+  border-radius: 50%;
+  top: 122%;
+  left: 100%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+
+  animation: wave_move 3s infinite;
+  animation-delay: 3s;
+}
+.bridge{
+  position: absolute;
+  width: 1400px;
+  height: 700px;
+  top: 70%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  animation-delay: 3s;
+}
+
+@keyframes g_class_drive6_move{
+  0%{
+    left: 200%;
+  }
+  100%{
+    left: -100%;
+  }
+} 
+
+.g_class_drive6{
+  position: absolute;
+  width: 360px;
+  height: 165px;
+  top: 73.5%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+
+  animation: g_class_drive6_move 7s forwards;
+}
+
+.wheel_control_drive6{
+  position: absolute;
+  width: 360px;
+  height: 165px;
+  top: 73.5%;
+  left: 50%;
+  background-color: rgba(247, 0, 0, 0);
+  transform:translate(-50%, -50%);
+  z-index: 0;
+
+  animation: g_class_drive6_move 7s  forwards;
+}
+
+.w1_drive6{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:62%;
+  left: 11.8%;
+  animation: wheel_rotate 0.2s linear infinite forwards;
+  transform-origin: 50% 50%;
+}
+.w2_drive6{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:62%;
+  left: 73%;
+  
+  animation: wheel_rotate 0.2s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.typing_drive_6{
+  position: absolute;
+  top:25%;
+  left: 90%;
+  width: 2000px;
+  font-size: 80px;
+  font-family: 'Russo One', sans-serif;
+  white-space: nowrap;
+  transform:translate(-50%, -50%);
+}
+
+.typing_drive_6_1{
+  position: absolute;
+  top:35%;
+  left: 92.5%;
+  width: 2000px;
+  font-size: 20px;
+  font-family: 'Russo One', sans-serif;
+  white-space: nowrap;
+  transform:translate(-50%, -50%);
+  animation: typing_drive5_4 2s infinite;
+  animation-delay: 3;
+}
+
+.go_to_scene_6{
+  position: absolute;
+  width: 10000px;
+  height: 3000px;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+  top: 70%;
+  left: 50%;
+
+  visibility: hidden;
+  animation: for_scene_3 1s;
+  transform:translate(-50%, -50%);
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  z-index: 3;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@드라이브7@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.rail_drive7{
+  position: absolute;
+  border-bottom: 5000px solid black;
+  border-left: 8000px solid transparent;
+  border-right: 0px solid transparent;
+  height: 500px;
+  width: 2000px;
+  top:90%;
+  left: 80%;
+  transform:translate(-50%, -50%);
+}
+
+@keyframes g_class_drive7_move{
+  0%{
+    left: 100%;
+    top:-37%;
+  }
+  100%{
+    left: -200%;
+    top:480%;
+  }
+} 
+
+.g_class_drive7{
+  position: absolute;
+  width: 360px;
+  height: 165px;
+  top: 48%;
+  left: 50%;
+  transform: rotate(-32deg);
+
+  animation: g_class_drive7_move 6s infinite;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@드라이브7@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.rail_drive8{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 45px;
+  height: 700px;
+  top: 70%;
+  left: 31.65%;
+  transform:translate(-50%, -50%);
+  z-index: 1;
+}
