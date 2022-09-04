@@ -213,7 +213,27 @@ function DRIVE7(){
 function DRIVE8(){
   return <div className="start5">
     <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
-    <div class ="rail_drive8"></div>
+    <div class ="rail_drive8_1"></div>
+    <div class ="rail_drive8_2"></div>
+    <div class ="rail_drive8_3"></div>
+    <div class ="rail_drive8_4"></div>
+    <div class ="rail_drive8_5"></div>
+    <div class ="rail_drive8_6"></div>
+    <div class ="rail_drive8_7"></div>
+    <img class="g_class_drive8" alt="" src="img/G_CLASS.png"></img>
+    <div class='wheel_control_drive8'>
+      <img class="w1_drive8" alt="" src="img/wheel1.png"></img>
+      <img class="w2_drive8" alt="" src="img/wheel2.png"></img>
+    </div>
+</div>
+}
+
+//드라이브9 => 정면
+function DRIVE9(){
+  return <div className="start5">
+    <div class="click_to_start_out">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</div>
+    <img class="g_class_drive9" alt="" src="img/G_CLASS.png"></img>
+    <img class="rail_drive9" alt="" src="img/ground_9.png"></img>
 </div>
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -311,20 +331,27 @@ function App() {
    if(drive === 5){
     content = null;
     content1 = <DRIVE6></DRIVE6>
-    setTimeout(()=>{ setDrive(6) }, 7000);
+    setTimeout(()=>{ setDrive(6) }, 5000);
   }
 
    //씬6(드라이브7)
    if(drive === 6){
     content = null;
     content1 = <DRIVE7></DRIVE7>
-    setTimeout(()=>{ setDrive(7) }, 2500);
+    setTimeout(()=>{ setDrive(7) }, 2000);
   }
 
    //씬7(드라이브8)
    if(drive === 7){
     content = null;
     content1 = <DRIVE8></DRIVE8>
+    setTimeout(()=>{ setDrive(8) }, 3000);
+  }
+
+   //씬8(드라이브8)
+   if(drive === 8){
+    content = null;
+    content1 = <DRIVE9></DRIVE9>
   }
 ////////////////홈페이지 이동//////////////////
   // 홈페이지 이동!
@@ -342,7 +369,6 @@ function App() {
         {content2}
       </header>
     </div>
-    
   );
 }
 

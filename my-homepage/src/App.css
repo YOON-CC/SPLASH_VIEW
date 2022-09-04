@@ -1894,13 +1894,176 @@ body{
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*@@@@@@@@@@@@@@@@@@@@@@@@드라이브7@@@@@@@@@@@@@@@@@@@@@@@@@*/
-.rail_drive8{
+@keyframes ground8_move{
+  0%{
+    top:115%;
+  }
+  100%{
+    top:200%;
+  }
+} 
+.rail_drive8_1{
   position: absolute;
-  background-color: rgb(0, 0, 0);
-  width: 45px;
-  height: 700px;
-  top: 70%;
-  left: 31.65%;
+  background-color: black;
+  height: 300px;
+  width: 280px;
+  top:115%;
+  left: 93%;
+  transform:translate(-50%, -50%);
+
+  animation: ground8_move 2s forwards;
+  animation-delay: 1.5s;
+}
+.rail_drive8_2{
+  position: absolute;
+  background-color: black;
+  height: 300px;
+  width: 280px;
+  top:115%;
+  left: 78.5%;
+  transform:translate(-50%, -50%);
+  animation: ground8_move 2s forwards;
+  animation-delay: 1.6s;
+}
+.rail_drive8_3{
+  position: absolute;
+  background-color: black;
+  height: 300px;
+  width: 280px;
+  top:115%;
+  left: 64%;
+  transform:translate(-50%, -50%);
+  animation: ground8_move 2s forwards;
+  animation-delay: 1.7s;
+}
+.rail_drive8_4{
+  position: absolute;
+  background-color: black;
+  height: 300px;
+  width: 280px;
+  top:115%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  animation: ground8_move 2s forwards;
+  animation-delay: 1.8s;
+}
+.rail_drive8_5{
+  position: absolute;
+  background-color: black;
+  height: 300px;
+  width: 280px;
+  top:115%;
+  left: 36%;
+  transform:translate(-50%, -50%);
+  animation: ground8_move 2s forwards;
+  animation-delay: 2s;
+}
+.rail_drive8_6{
+  position: absolute;
+  background-color: black;
+  height: 300px;
+  width: 280px;
+  top:115%;
+  left: 21.4%;
+  transform:translate(-50%, -50%);
+  animation: ground8_move 2s forwards;
+  animation-delay: 2.1s;
+}
+.rail_drive8_7{
+  position: absolute;
+  background-color: black;
+  height: 300px;
+  width: 280px;
+  top:115%;
+  left: 7%;
+  transform:translate(-50%, -50%);
+  animation: ground8_move 2s forwards;
+  animation-delay: 2.2s;
+}
+
+@keyframes g_class_drive8_move{
+  0%{
+    left: 180%;
+  }
+  100%{
+    left: -150%;
+  }
+} 
+.g_class_drive8{
+  position: absolute;
+  width: 360px;
+  height: 165px;
+  top: 83.5%;
+  left: 50%;
+  z-index: 1;
+  transform:translate(-50%, -50%);
+
+  animation: g_class_drive8_move 7s;
+}
+.wheel_control_drive8{
+  position: absolute;
+  width: 360px;
+  height: 165px;
+  top: 83.5%;
+  left: 50%;
+  background-color: rgba(247, 0, 0, 0);
   transform:translate(-50%, -50%);
   z-index: 1;
+
+  animation: g_class_drive8_move 7s;
+}
+
+.w1_drive8{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:62%;
+  left: 11.85%;
+  animation: wheel_rotate 0.2s linear infinite forwards;
+  transform-origin: 50% 50%;
+}
+.w2_drive8{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:62%;
+  left: 72.8%;
+  
+  animation: wheel_rotate 0.2s linear infinite;
+  transform-origin: 50% 50%;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@드라이브9@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.rail_drive9{
+  position: absolute;
+  height: 600px;
+  width: 900px;
+  top:90%;
+  left: 80%;
+  transform:translate(-50%, -50%);
+}
+
+@keyframes g_class_drive9_move{
+  0%{
+    top: 177%;
+    left: 180%;
+  }
+  100%{
+    left: -130%;
+    top: -137.5%;
+  }
+} 
+
+.g_class_drive9{
+  position: absolute;
+  width: 360px;
+  height: 165px;
+  top: 75%;
+  left: 80%;
+  z-index: 1;
+  transform:translate(-50%, -50%);
+  transform: rotate(19.5deg);
+
+  animation: g_class_drive9_move 5s infinite forwards;
+
 }
