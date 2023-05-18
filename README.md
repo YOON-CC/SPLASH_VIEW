@@ -5,4 +5,4 @@
 1. 반응형을 고려하지 않았기 때문에 화면 확대 100~110%로 추천드립니다.
 2. 당시 컴포넌트를 나누어 진행하지 않고 App.js파일에 모두 담았기 때문에 코드의 가독성이 많이 떨어집니다.
 
-<img src="C:\Users\happy\OneDrive\바탕 화면\스플레쉬 구도.png"  width="700" height="370">
+![스플레쉬 구도](https://github.com/YOON-CC/SPLASH_VIEW/assets/87313979/ff41d055-72cc-448a-911d-3057bf23d65e)
