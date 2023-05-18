@@ -2067,3 +2067,11 @@ body{
   animation: g_class_drive9_move 5s infinite forwards;
 
 }
+
+.byebye{
+  font-size: 70px;;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 380px;
+}

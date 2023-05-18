@@ -236,6 +236,13 @@ function DRIVE9(){
     <img class="rail_drive9" alt="" src="img/ground_9.png"></img>
 </div>
 }
+
+//드라이브9 => 정면
+function DRIVE10(){
+  return <div className="start5">
+    <div class = "byebye">Thank you for watching!</div>
+</div>
+}
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 function App() {
   const [mode, setMode] = useState('stop');
@@ -352,13 +359,20 @@ function App() {
    if(drive === 8){
     content = null;
     content1 = <DRIVE9></DRIVE9>
+    setTimeout(()=>{ setDrive(9) }, 3000);
+  }
+
+   //씬9(드라이브 마무리)
+   if(drive === 9){
+    content = null;
+    content1 = <DRIVE10></DRIVE10>
   }
 ////////////////홈페이지 이동//////////////////
   // 홈페이지 이동!
   if(go === 1){
     content = null;
     content1 = null;
-    content2 = null;
+    content2 = <DRIVE10></DRIVE10>;
   }
 
   return (
